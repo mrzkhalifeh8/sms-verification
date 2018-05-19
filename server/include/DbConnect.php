@@ -22,6 +22,8 @@ class DbConnect {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
             exit;
         }
+
+        mysqli_set_charset($this->conn, 'utf8');
  
         // returing connection resource
         return $this->conn;
